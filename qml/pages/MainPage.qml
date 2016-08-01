@@ -9,6 +9,8 @@ Page {
         model: ListModel {
             ListElement { sensor: "Network Registeration"; address: "networkRegisteration.qml" }
             ListElement { sensor: "Sim Manager"; address: "simManager.qml" }
+            ListElement { sensor: "Modem"; address: "modem.qml" }
+            ListElement { sensor: "Radio Settings"; address: "radioSettings.qml" }
         }
         anchors.fill: parent
         header: PageHeader {

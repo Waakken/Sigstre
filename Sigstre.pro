@@ -37,5 +37,7 @@ TRANSLATIONS += translations/Sigstre-de.ts
 DISTFILES += \
     qml/pages/networkRegisteration.qml \
     qml/pages/simManager.qml \
-    qml/pages/MainPage.qml
+    qml/pages/MainPage.qml \
+    qml/pages/modem.qml \
+    qml/pages/radioSettings.qml
 
