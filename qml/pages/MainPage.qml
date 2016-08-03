@@ -7,10 +7,14 @@ Page {
     SilicaListView {
         id: listView
         model: ListModel {
-            ListElement { sensor: "Network Registeration"; address: "networkRegisteration.qml" }
-            ListElement { sensor: "Sim Manager"; address: "simManager.qml" }
+            ListElement { sensor: "Connection Context"; address: "connectionContext.qml" }
+            ListElement { sensor: "Connection Manager"; address: "connectionManager.qml" }
             ListElement { sensor: "Modem"; address: "modem.qml" }
+            ListElement { sensor: "Network Registeration"; address: "networkRegisteration.qml" }
             ListElement { sensor: "Radio Settings"; address: "radioSettings.qml" }
+            ListElement { sensor: "Sim Manager"; address: "simManager.qml" }
+            ListElement { sensor: "Sim Toolkit"; address: "simToolKit.qml" }
+            ListElement { sensor: "Voice Call Manager"; address: "voiceCallManager.qml" }
         }
         anchors.fill: parent
         header: PageHeader {

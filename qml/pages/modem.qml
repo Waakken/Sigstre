@@ -19,15 +19,6 @@ Page {
             PageHeader {
                 title: "Modem"
             }
-                Button {
-                    x: Theme.paddingLarge
-                    id: stopButton
-                    text: "Update"
-                    onClicked: {
-                        dbusNetwork.getProperties();
-                        handleProperties(root.getPropertiesObject)
-                    }
-                }
             TextEdit {
                 x: Theme.paddingLarge
                 id: messageText
@@ -38,16 +29,17 @@ Page {
                 color: Theme.highlightColor
                 readOnly: true
             }
+            Timer {
+                id: timer
+                interval: 1000
+                running: true
+                repeat: true
+                onTriggered: {
+                    dbusNetwork.getProperties();
+                    messageText.text = topPage.handleProperties(root.getPropertiesObject);
+                }
+            }
         }
-    }
-
-
-    function handleProperties(result) {
-        var message = "";
-        for (var key in result) {
-            message = message + key + ": " + result[key] + "\n";
-        }
-        messageText.text = message;
     }
 
     function storeResultsTovariable(results) {

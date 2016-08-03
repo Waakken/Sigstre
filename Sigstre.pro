@@ -39,5 +39,9 @@ DISTFILES += \
     qml/pages/simManager.qml \
     qml/pages/MainPage.qml \
     qml/pages/modem.qml \
-    qml/pages/radioSettings.qml
+    qml/pages/radioSettings.qml \
+    qml/pages/voiceCallManager.qml \
+    qml/pages/simToolKit.qml \
+    qml/pages/connectionManager.qml \
+    qml/pages/connectionContext.qml
 

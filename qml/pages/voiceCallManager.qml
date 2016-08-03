@@ -17,7 +17,7 @@ Page {
             spacing: Theme.paddingLarge
             id: column
             PageHeader {
-                title: "Radio Settings"
+                title: "Voice Call Manager"
             }
             TextEdit {
                 x: Theme.paddingLarge
@@ -41,15 +41,13 @@ Page {
             }
         }
     }
-
     function storeResultsTovariable(results) {
         root.getPropertiesObject = results;
     }
-
     DBusInterface {
         service: 'org.ofono'
         path: '/ril_0'
-        iface: 'org.ofono.RadioSettings'
+        iface: 'org.ofono.VoiceCallManager'
         id: dbusNetwork
         bus: DBus.SystemBus
 

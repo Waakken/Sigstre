@@ -34,8 +34,20 @@ import "pages"
 
 ApplicationWindow
 {
+    id: topPage
     initialPage: Component { MainPage { } }
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
     allowedOrientations: Orientation.All
     _defaultPageOrientations: Orientation.All
+
+    // Functions used by lower pages
+    function handleProperties(result) {
+        var message = "";
+        for (var key in result) {
+            message = message + key + ": " + result[key] + "\n";
+            message = message.replace(/,/g, " ");
+        }
+        return message;
+    }
+
 }

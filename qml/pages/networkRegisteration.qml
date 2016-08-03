@@ -61,7 +61,6 @@ Page {
         }
     }
 
-
     function handleNetworkRegistrationProperties(result) {
         var message = "";
         var foundKeys = "";
@@ -80,14 +79,6 @@ Page {
         }
 
         message = message + "\nPrevious Basestations\n";
-
-        /*var listOfStations = root.foundBasestations.values();
-        var listOfKeys = listOfStations[0].keys();
-        var header = "";
-        for (key in listOfKeys) {
-            header = header + key + " ";
-        }
-        message = message + header + "\n";*/
 
         var singleBS = "";
         for (var basestationKey in root.foundBasestations) {
@@ -122,11 +113,6 @@ Page {
                       })
         }
 
-        function getModems() {
-            var result = call('GetModems', undefined);
-            console.log("Called GetModems. Result: " + result);
-            signalStrength.text = result;
-        }
     }
 
     function addTestStations() {
